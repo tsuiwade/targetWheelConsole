@@ -1,0 +1,121 @@
+/* 红色 */
+QPushButton#RedButton {
+    /* border-image: url(:/stop-button111.svg); */
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    background: #f44336; /* 默认颜色 */f44336
+}
+
+QPushButton#RedButton:hover {
+    font-size: 20px;
+    color: white;
+    background: #d5d5d5; /* 悬停颜色 */
+}
+
+QPushButton#RedButton:pressed {
+    background: #f2f2f2 /* 按下颜色 */
+}
+
+QPushButton#RedButton:checked {
+    border-image: url(:/play-button111.svg);
+    /*background: #4caf50   */
+}
+
+/* 蓝色 */
+QPushButton#BlueButton {
+    border-image: url(:/stop-button111.svg);
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: white;
+    background: #6495ed; /* 默认颜色 */
+}
+
+QPushButton#BlueButton:hover {
+    font-size: 20px;
+    color: white;
+    background: #d5d5d5; /* 悬停颜色 */
+}
+
+QPushButton#BlueButton:pressed {
+    background: #f2f2f2 /* 按下颜色 */
+}
+
+QPushButton#BlueButton:checked {
+    /*background: #4caf50   */
+    border-image: url(:/play-button111.svg);
+}
+
+/* 绿色 */
+QPushButton#GreenButton {
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    background: #4caf50; /* 默认颜色 */
+}
+
+QPushButton#GreenButton:hover {
+    font-size: 20px;
+    color: white;
+    background: #d5d5d5; /* 悬停颜色 */
+}
+
+QPushButton#GreenButton:pressed {
+    background: #f2f2f2 /* 按下颜色 */
+}
+
+/* 灰色 */
+QPushButton#GrayButton {
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    background: #e7e7e7; /* 默认颜色 */
+}
+
+QPushButton#GrayButton:hover {
+    font-size: 20px;
+    color: white;
+    background: #d5d5d5; /* 悬停颜色 */
+}
+
+QPushButton#GrayButton:pressed {
+    background: #f2f2f2 /* 按下颜色 */
+}
+
+/* 黑色 */
+QPushButton#BlackButton {
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    background: #555555; /* 默认颜色 */
+}
+
+QPushButton#BlackButton:hover {
+    font-size: 20px;
+    color: white;
+    background: #d5d5d5; /* 悬停颜色 */
+}
+
+QPushButton#BlackButton:pressed {
+    background: #f2f2f2 /* 按下颜色 */
+}

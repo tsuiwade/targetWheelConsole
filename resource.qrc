@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>buttonGreen.png</file>
+        <file>buttonRed.png</file>
+        <file>round_button.qss</file>
+        <file>banner.png</file>
+        <file>buttonRed1.png</file>
+        <file>test.svg</file>
+        <file>play-button111.svg</file>
+        <file>stop-button111.svg</file>
+    </qresource>
+</RCC>
