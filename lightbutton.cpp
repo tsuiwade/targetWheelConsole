@@ -7,7 +7,7 @@
 #include "qtimer.h"
 #include "qdebug.h"
 
-LightButton::LightButton(QWidget *parent) : QWidget(parent)
+LightButton::LightButton(QWidget *parent) : QPushButton(parent)
 {
     text = "";
     textColor = QColor(255, 255, 255);
@@ -16,6 +16,11 @@ LightButton::LightButton(QWidget *parent) : QWidget(parent)
 
     borderOutColorStart = QColor(255, 255, 255);
     borderOutColorEnd = QColor(166, 166, 166);
+
+    borderOutRadius = 99;
+    borderInRadius = 90;
+    bgRadius= 80;
+    overlayRadius = 80;
 
     borderInColorStart = QColor(166, 166, 166);
     borderInColorEnd = QColor(255, 255, 255);
@@ -39,6 +44,24 @@ LightButton::LightButton(QWidget *parent) : QWidget(parent)
 
 bool LightButton::eventFilter(QObject *watched, QEvent *event)
 {
+
+    if (event->type() == QEvent::HoverEnter) //鼠标进入
+    {
+        this->bgRadius = 86;
+        this->overlayRadius = 86;
+        this->borderOutRadius=100;
+        this->borderInRadius=93;
+        this->update();
+    }
+    else if (event->type() == QEvent::HoverLeave)    //鼠标离开
+    {
+        this->borderOutRadius=99;
+        this->borderInRadius=90;
+        this->bgRadius = 80;
+        this->overlayRadius = 80;
+        this->update();
+    }
+
     if (canMove) {
         static QPoint lastPoint;
         static bool pressed = false;
@@ -90,51 +113,51 @@ void LightButton::paintEvent(QPaintEvent *)
         painter.scale(side / 200.0, side / 200.0);
 
         //绘制外边框
-        drawBorderOut(&painter);
+        drawBorderOut(&painter,borderOutRadius);
         //绘制内边框
-        drawBorderIn(&painter);
+        drawBorderIn(&painter,borderInRadius);
         //绘制内部指示颜色
-        drawBg(&painter);
+        drawBg(&painter,bgRadius);
         //绘制居中文字
         drawText(&painter);
         //绘制遮罩层
-        drawOverlay(&painter);
+        drawOverlay(&painter,overlayRadius);
     }
 }
 
-void LightButton::drawBorderOut(QPainter *painter)
+void LightButton::drawBorderOut(QPainter *painter,int borderOutRadius  )
 {
-    int radius = 99;
+    //    int borderOutRadius = 99;
     painter->save();
     painter->setPen(Qt::NoPen);
-    QLinearGradient borderGradient(0, -radius, 0, radius);
+    QLinearGradient borderGradient(0, -borderOutRadius, 0, borderOutRadius);
     borderGradient.setColorAt(0, borderOutColorStart);
     borderGradient.setColorAt(1, borderOutColorEnd);
     painter->setBrush(borderGradient);
-    painter->drawEllipse(-radius, -radius, radius * 2, radius * 2);
+    painter->drawEllipse(-borderOutRadius, -borderOutRadius, borderOutRadius * 2, borderOutRadius * 2);
     painter->restore();
 }
 
-void LightButton::drawBorderIn(QPainter *painter)
+void LightButton::drawBorderIn(QPainter *painter,int borderInRadius  )
 {
-    int radius = 90;
+    //    int radius = 90;
     painter->save();
     painter->setPen(Qt::NoPen);
-    QLinearGradient borderGradient(0, -radius, 0, radius);
+    QLinearGradient borderGradient(0, -borderInRadius, 0, borderInRadius);
     borderGradient.setColorAt(0, borderInColorStart);
     borderGradient.setColorAt(1, borderInColorEnd);
     painter->setBrush(borderGradient);
-    painter->drawEllipse(-radius, -radius, radius * 2, radius * 2);
+    painter->drawEllipse(-borderInRadius, -borderInRadius, borderInRadius * 2, borderInRadius * 2);
     painter->restore();
 }
 
-void LightButton::drawBg(QPainter *painter)
+void LightButton::drawBg(QPainter *painter, int bgRadius)
 {
-    int radius = 80;
+    //    int radius = 80;
     painter->save();
     painter->setPen(Qt::NoPen);
     painter->setBrush(bgColor);
-    painter->drawEllipse(-radius, -radius, radius * 2, radius * 2);
+    painter->drawEllipse(-bgRadius, -bgRadius, bgRadius * 2, bgRadius * 2);
     painter->restore();
 }
 
@@ -148,7 +171,7 @@ void LightButton::drawText(QPainter *painter)
     painter->save();
 
     QFont font;
-    font.setPixelSize(85);
+    font.setPixelSize(bgRadius);
     painter->setFont(font);
     painter->setPen(textColor);
     QRect rect(-radius, -radius, radius * 2, radius * 2);
@@ -156,27 +179,27 @@ void LightButton::drawText(QPainter *painter)
     painter->restore();
 }
 
-void LightButton::drawOverlay(QPainter *painter)
+void LightButton::drawOverlay(QPainter *painter,int overlayRadius )
 {
     if (!showOverlay) {
         return;
     }
 
-    int radius = 80;
+    //    int radius = 60;
     painter->save();
     painter->setPen(Qt::NoPen);
 
     QPainterPath smallCircle;
     QPainterPath bigCircle;
-    radius -= 1;
-    smallCircle.addEllipse(-radius, -radius, radius * 2, radius * 2);
-    radius *= 2;
-    bigCircle.addEllipse(-radius, -radius + 140, radius * 2, radius * 2);
+    overlayRadius -= 1;
+    smallCircle.addEllipse(-overlayRadius, -overlayRadius, overlayRadius * 2, overlayRadius * 2);
+    overlayRadius *= 2;
+    bigCircle.addEllipse(-overlayRadius, -overlayRadius + 140, overlayRadius * 2, overlayRadius * 2);
 
     //高光的形状为小圆扣掉大圆的部分
     QPainterPath highlight = smallCircle - bigCircle;
 
-    QLinearGradient linearGradient(0, -radius / 2, 0, 0);
+    QLinearGradient linearGradient(0, -overlayRadius / 2, 0, 0);
     overlayColor.setAlpha(100);
     linearGradient.setColorAt(0.0, overlayColor);
     overlayColor.setAlpha(30);
@@ -333,6 +356,28 @@ void LightButton::setBgColor(const QColor &bgColor)
         this->bgColor = bgColor;
         this->update();
     }
+}
+
+void LightButton::setBorderOutRadius(int value)
+{
+    this->borderOutRadius = value;
+    this->update();
+}
+
+void LightButton::setBorderInRadius(int value)
+{
+    this->borderInRadius = value;
+    this->update();
+}
+void LightButton::setBgRadius(int value)
+{
+    this->bgRadius = value;
+    this->update();
+}
+void LightButton::setOverlayRadius(int value)
+{
+    this->overlayRadius = value;
+    this->update();
 }
 
 void LightButton::setCanMove(bool canMove)

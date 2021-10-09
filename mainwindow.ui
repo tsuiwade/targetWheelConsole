@@ -20,245 +20,302 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+   <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0">
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QFrame" name="frame">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="LightButton" name="widget" native="true">
+      <widget class="LightButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>120</width>
-         <height>80</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="LightButton" name="widget_2" native="true">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>30</y>
-         <width>120</width>
-         <height>80</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="LightButton" name="widget_3" native="true">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
+         <x>60</x>
          <y>60</y>
-         <width>120</width>
-         <height>80</height>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_4" native="true">
+      <widget class="LightButton" name="pushButton_2">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>50</y>
-         <width>120</width>
-         <height>80</height>
+         <x>200</x>
+         <y>60</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_5" native="true">
+      <widget class="LightButton" name="pushButton_3">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>160</y>
-         <width>120</width>
-         <height>80</height>
+         <x>310</x>
+         <y>60</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_6" native="true">
+      <widget class="LightButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>60</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="LightButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>150</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="LightButton" name="pushButton_6">
        <property name="geometry">
         <rect>
          <x>230</x>
-         <y>170</y>
-         <width>120</width>
-         <height>80</height>
+         <y>130</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_7" native="true">
+      <widget class="LightButton" name="pushButton_7">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>170</y>
-         <width>120</width>
-         <height>80</height>
+         <x>340</x>
+         <y>150</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_8" native="true">
+      <widget class="LightButton" name="pushButton_8">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>190</y>
-         <width>120</width>
-         <height>80</height>
+         <x>480</x>
+         <y>160</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="LightButton" name="widget_9" native="true">
+      <widget class="LightButton" name="pushButton_9">
        <property name="geometry">
         <rect>
-         <x>210</x>
-         <y>310</y>
-         <width>120</width>
-         <height>80</height>
+         <x>340</x>
+         <y>270</y>
+         <width>93</width>
+         <height>28</height>
         </rect>
        </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
       </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>150</width>
-        <height>400</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QPushButton" name="btn_search">
-         <property name="text">
-          <string>搜索串口</string>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-         <property name="checked">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_portName">
-           <property name="text">
-            <string>串口号：</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox_portName"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_open">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>打开串口</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_txt_recv">
-         <property name="text">
-          <string>接收窗口</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="textEdit_send">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>1</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_txt_send">
-         <property name="text">
-          <string>发送窗口</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="textEdit_recv">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>1</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>50</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QPushButton" name="btn_recvClear">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>1</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>清除接收</string>
-           </property>
-           <property name="checkable">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="btn_send">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>1</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>发送数据</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
+      <widget class="QGroupBox" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>20</y>
+         <width>150</width>
+         <height>400</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>400</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="btn_search">
+          <property name="text">
+           <string>搜索串口1</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_portName">
+            <property name="text">
+             <string>串口号：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_portName"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_open">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>打开串口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_txt_recv">
+          <property name="text">
+           <string>接收窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_send">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_txt_send">
+          <property name="text">
+           <string>发送窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_recv">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="btn_recvClear">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>清除接收</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_send">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>1</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>发送数据</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -269,9 +326,15 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
+   <widget class="MyMenu" name="menuaaa">
+    <property name="title">
+     <string>aaa</string>
+    </property>
+   </widget>
+   <addaction name="menuaaa"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -282,14 +345,23 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action111">
+   <property name="text">
+    <string>111</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>LightButton</class>
-   <extends>QWidget</extends>
+   <extends>QPushButton</extends>
    <header>lightbutton.h</header>
-   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyMenu</class>
+   <extends>QMenu</extends>
+   <header>mymenu.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

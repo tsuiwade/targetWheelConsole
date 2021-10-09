@@ -10,8 +10,10 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -24,25 +26,27 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "lightbutton.h"
+#include "mymenu.h"
 
 QT_BEGIN_NAMESPACE
 
 class Ui_MainWindow
 {
 public:
+    QAction *action111;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout_3;
-    QGroupBox *groupBox;
-    LightButton *widget;
-    LightButton *widget_2;
-    LightButton *widget_3;
-    LightButton *widget_4;
-    LightButton *widget_5;
-    LightButton *widget_6;
-    LightButton *widget_7;
-    LightButton *widget_8;
-    LightButton *widget_9;
-    QGroupBox *groupBox_2;
+    QFrame *frame;
+    LightButton *pushButton;
+    LightButton *pushButton_2;
+    LightButton *pushButton_3;
+    LightButton *pushButton_4;
+    LightButton *pushButton_5;
+    LightButton *pushButton_6;
+    LightButton *pushButton_7;
+    LightButton *pushButton_8;
+    LightButton *pushButton_9;
+    QGroupBox *frame_2;
     QVBoxLayout *verticalLayout;
     QPushButton *btn_search;
     QHBoxLayout *horizontalLayout_2;
@@ -57,6 +61,7 @@ public:
     QPushButton *btn_recvClear;
     QPushButton *btn_send;
     QMenuBar *menuBar;
+    MyMenu *menuaaa;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -65,6 +70,8 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
+        action111 = new QAction(MainWindow);
+        action111->setObjectName(QString::fromUtf8("action111"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -76,50 +83,57 @@ public:
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        groupBox = new QGroupBox(centralWidget);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        sizePolicy.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
-        groupBox->setSizePolicy(sizePolicy);
-        widget = new LightButton(groupBox);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(20, 20, 120, 80));
-        widget_2 = new LightButton(groupBox);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        widget_2->setGeometry(QRect(180, 30, 120, 80));
-        widget_3 = new LightButton(groupBox);
-        widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setGeometry(QRect(350, 60, 120, 80));
-        widget_4 = new LightButton(groupBox);
-        widget_4->setObjectName(QString::fromUtf8("widget_4"));
-        widget_4->setGeometry(QRect(500, 50, 120, 80));
-        widget_5 = new LightButton(groupBox);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setGeometry(QRect(40, 160, 120, 80));
-        widget_6 = new LightButton(groupBox);
-        widget_6->setObjectName(QString::fromUtf8("widget_6"));
-        widget_6->setGeometry(QRect(230, 170, 120, 80));
-        widget_7 = new LightButton(groupBox);
-        widget_7->setObjectName(QString::fromUtf8("widget_7"));
-        widget_7->setGeometry(QRect(360, 170, 120, 80));
-        widget_8 = new LightButton(groupBox);
-        widget_8->setObjectName(QString::fromUtf8("widget_8"));
-        widget_8->setGeometry(QRect(500, 190, 120, 80));
-        widget_9 = new LightButton(groupBox);
-        widget_9->setObjectName(QString::fromUtf8("widget_9"));
-        widget_9->setGeometry(QRect(210, 310, 120, 80));
-
-        horizontalLayout_3->addWidget(groupBox);
-
-        groupBox_2 = new QGroupBox(centralWidget);
-        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        sizePolicy.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy);
-        groupBox_2->setMaximumSize(QSize(150, 400));
-        verticalLayout = new QVBoxLayout(groupBox_2);
+        frame = new QFrame(centralWidget);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        sizePolicy.setHeightForWidth(frame->sizePolicy().hasHeightForWidth());
+        frame->setSizePolicy(sizePolicy);
+        pushButton = new LightButton(frame);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(60, 60, 93, 28));
+        pushButton->setCheckable(true);
+        pushButton_2 = new LightButton(frame);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(200, 60, 93, 28));
+        pushButton_2->setCheckable(true);
+        pushButton_3 = new LightButton(frame);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(310, 60, 93, 28));
+        pushButton_3->setCheckable(true);
+        pushButton_4 = new LightButton(frame);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(440, 60, 93, 28));
+        pushButton_4->setCheckable(true);
+        pushButton_5 = new LightButton(frame);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(110, 150, 93, 28));
+        pushButton_5->setCheckable(true);
+        pushButton_6 = new LightButton(frame);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        pushButton_6->setGeometry(QRect(230, 130, 93, 28));
+        pushButton_6->setCheckable(true);
+        pushButton_7 = new LightButton(frame);
+        pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
+        pushButton_7->setGeometry(QRect(340, 150, 93, 28));
+        pushButton_7->setCheckable(true);
+        pushButton_8 = new LightButton(frame);
+        pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
+        pushButton_8->setGeometry(QRect(480, 160, 93, 28));
+        pushButton_8->setCheckable(true);
+        pushButton_9 = new LightButton(frame);
+        pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
+        pushButton_9->setGeometry(QRect(340, 270, 93, 28));
+        pushButton_9->setCheckable(true);
+        frame_2 = new QGroupBox(frame);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setGeometry(QRect(630, 20, 150, 400));
+        sizePolicy.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
+        frame_2->setSizePolicy(sizePolicy);
+        frame_2->setMaximumSize(QSize(150, 400));
+        verticalLayout = new QVBoxLayout(frame_2);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        btn_search = new QPushButton(groupBox_2);
+        btn_search = new QPushButton(frame_2);
         btn_search->setObjectName(QString::fromUtf8("btn_search"));
         btn_search->setCheckable(false);
         btn_search->setChecked(false);
@@ -129,12 +143,12 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_portName = new QLabel(groupBox_2);
+        label_portName = new QLabel(frame_2);
         label_portName->setObjectName(QString::fromUtf8("label_portName"));
 
         horizontalLayout_2->addWidget(label_portName);
 
-        comboBox_portName = new QComboBox(groupBox_2);
+        comboBox_portName = new QComboBox(frame_2);
         comboBox_portName->setObjectName(QString::fromUtf8("comboBox_portName"));
 
         horizontalLayout_2->addWidget(comboBox_portName);
@@ -142,7 +156,7 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-        btn_open = new QPushButton(groupBox_2);
+        btn_open = new QPushButton(frame_2);
         btn_open->setObjectName(QString::fromUtf8("btn_open"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Maximum);
         sizePolicy1.setHorizontalStretch(0);
@@ -152,12 +166,12 @@ public:
 
         verticalLayout->addWidget(btn_open);
 
-        label_txt_recv = new QLabel(groupBox_2);
+        label_txt_recv = new QLabel(frame_2);
         label_txt_recv->setObjectName(QString::fromUtf8("label_txt_recv"));
 
         verticalLayout->addWidget(label_txt_recv);
 
-        textEdit_send = new QTextEdit(groupBox_2);
+        textEdit_send = new QTextEdit(frame_2);
         textEdit_send->setObjectName(QString::fromUtf8("textEdit_send"));
         QSizePolicy sizePolicy2(QSizePolicy::Ignored, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
@@ -168,12 +182,12 @@ public:
 
         verticalLayout->addWidget(textEdit_send);
 
-        label_txt_send = new QLabel(groupBox_2);
+        label_txt_send = new QLabel(frame_2);
         label_txt_send->setObjectName(QString::fromUtf8("label_txt_send"));
 
         verticalLayout->addWidget(label_txt_send);
 
-        textEdit_recv = new QTextEdit(groupBox_2);
+        textEdit_recv = new QTextEdit(frame_2);
         textEdit_recv->setObjectName(QString::fromUtf8("textEdit_recv"));
         QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
@@ -187,7 +201,7 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        btn_recvClear = new QPushButton(groupBox_2);
+        btn_recvClear = new QPushButton(frame_2);
         btn_recvClear->setObjectName(QString::fromUtf8("btn_recvClear"));
         QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy4.setHorizontalStretch(1);
@@ -198,7 +212,7 @@ public:
 
         horizontalLayout->addWidget(btn_recvClear);
 
-        btn_send = new QPushButton(groupBox_2);
+        btn_send = new QPushButton(frame_2);
         btn_send->setObjectName(QString::fromUtf8("btn_send"));
         sizePolicy4.setHeightForWidth(btn_send->sizePolicy().hasHeightForWidth());
         btn_send->setSizePolicy(sizePolicy4);
@@ -209,12 +223,14 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
 
-        horizontalLayout_3->addWidget(groupBox_2);
+        horizontalLayout_3->addWidget(frame);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 23));
+        menuBar->setGeometry(QRect(0, 0, 800, 26));
+        menuaaa = new MyMenu(menuBar);
+        menuaaa->setObjectName(QString::fromUtf8("menuaaa"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -222,6 +238,8 @@ public:
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
+
+        menuBar->addAction(menuaaa->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -231,14 +249,24 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        groupBox->setTitle(QString());
-        btn_search->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\344\270\262\345\217\243", nullptr));
+        action111->setText(QCoreApplication::translate("MainWindow", "111", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_7->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_8->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_9->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        btn_search->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\344\270\262\345\217\2431", nullptr));
         label_portName->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\345\217\267\357\274\232", nullptr));
         btn_open->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\262\345\217\243", nullptr));
         label_txt_recv->setText(QCoreApplication::translate("MainWindow", "\346\216\245\346\224\266\347\252\227\345\217\243", nullptr));
         label_txt_send->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201\347\252\227\345\217\243", nullptr));
         btn_recvClear->setText(QCoreApplication::translate("MainWindow", "\346\270\205\351\231\244\346\216\245\346\224\266", nullptr));
         btn_send->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201\346\225\260\346\215\256", nullptr));
+        menuaaa->setTitle(QCoreApplication::translate("MainWindow", "aaa", nullptr));
     } // retranslateUi
 
 };

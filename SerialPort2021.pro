@@ -29,16 +29,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         lightbutton.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        mymenu.cpp
 
 HEADERS += \
     lightbutton.h \
-        mainwindow.h \
-    mybutton.h
+        mainwindow.h \ \
+    mymenu.h
+
 
 FORMS += \
         mainwindow.ui
 
-RESOURCES += \
-    resource.qrc
 LIB_FILE ~= s,/,\\,g

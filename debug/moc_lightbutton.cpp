@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_LightButton_t {
-    QByteArrayData data[40];
-    char stringdata0[493];
+    QByteArrayData data[44];
+    char stringdata0[559];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -71,7 +71,11 @@ QT_MOC_LITERAL(35, 440, 11), // "setLightRed"
 QT_MOC_LITERAL(36, 452, 13), // "setLightGreen"
 QT_MOC_LITERAL(37, 466, 10), // "startAlarm"
 QT_MOC_LITERAL(38, 477, 9), // "stopAlarm"
-QT_MOC_LITERAL(39, 487, 5) // "alarm"
+QT_MOC_LITERAL(39, 487, 5), // "alarm"
+QT_MOC_LITERAL(40, 493, 18), // "setBorderOutRadius"
+QT_MOC_LITERAL(41, 512, 17), // "setBorderInRadius"
+QT_MOC_LITERAL(42, 530, 11), // "setBgRadius"
+QT_MOC_LITERAL(43, 542, 16) // "setOverlayRadius"
 
     },
     "LightButton\0setText\0\0text\0setTextColor\0"
@@ -87,7 +91,8 @@ QT_MOC_LITERAL(39, 487, 5) // "alarm"
     "setGreen\0setRed\0setYellow\0setBlack\0"
     "setGray\0setBlue\0setLightBlue\0setLightRed\0"
     "setLightGreen\0startAlarm\0stopAlarm\0"
-    "alarm"
+    "alarm\0setBorderOutRadius\0setBorderInRadius\0"
+    "setBgRadius\0setOverlayRadius"
 };
 #undef QT_MOC_LITERAL
 
@@ -97,39 +102,43 @@ static const uint qt_meta_data_LightButton[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      25,   14, // methods
-      13,  190, // properties
+      29,   14, // methods
+      13,  222, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,  139,    2, 0x0a /* Public */,
-       4,    1,  142,    2, 0x0a /* Public */,
-       6,    1,  145,    2, 0x0a /* Public */,
-       8,    1,  148,    2, 0x0a /* Public */,
-      10,    1,  151,    2, 0x0a /* Public */,
-      12,    1,  154,    2, 0x0a /* Public */,
-      14,    1,  157,    2, 0x0a /* Public */,
-      16,    1,  160,    2, 0x0a /* Public */,
-      18,    1,  163,    2, 0x0a /* Public */,
-      20,    1,  166,    2, 0x0a /* Public */,
-      22,    1,  169,    2, 0x0a /* Public */,
-      24,    1,  172,    2, 0x0a /* Public */,
-      26,    1,  175,    2, 0x0a /* Public */,
-      28,    0,  178,    2, 0x0a /* Public */,
-      29,    0,  179,    2, 0x0a /* Public */,
-      30,    0,  180,    2, 0x0a /* Public */,
-      31,    0,  181,    2, 0x0a /* Public */,
-      32,    0,  182,    2, 0x0a /* Public */,
-      33,    0,  183,    2, 0x0a /* Public */,
-      34,    0,  184,    2, 0x0a /* Public */,
-      35,    0,  185,    2, 0x0a /* Public */,
-      36,    0,  186,    2, 0x0a /* Public */,
-      37,    0,  187,    2, 0x0a /* Public */,
-      38,    0,  188,    2, 0x0a /* Public */,
-      39,    0,  189,    2, 0x0a /* Public */,
+       1,    1,  159,    2, 0x0a /* Public */,
+       4,    1,  162,    2, 0x0a /* Public */,
+       6,    1,  165,    2, 0x0a /* Public */,
+       8,    1,  168,    2, 0x0a /* Public */,
+      10,    1,  171,    2, 0x0a /* Public */,
+      12,    1,  174,    2, 0x0a /* Public */,
+      14,    1,  177,    2, 0x0a /* Public */,
+      16,    1,  180,    2, 0x0a /* Public */,
+      18,    1,  183,    2, 0x0a /* Public */,
+      20,    1,  186,    2, 0x0a /* Public */,
+      22,    1,  189,    2, 0x0a /* Public */,
+      24,    1,  192,    2, 0x0a /* Public */,
+      26,    1,  195,    2, 0x0a /* Public */,
+      28,    0,  198,    2, 0x0a /* Public */,
+      29,    0,  199,    2, 0x0a /* Public */,
+      30,    0,  200,    2, 0x0a /* Public */,
+      31,    0,  201,    2, 0x0a /* Public */,
+      32,    0,  202,    2, 0x0a /* Public */,
+      33,    0,  203,    2, 0x0a /* Public */,
+      34,    0,  204,    2, 0x0a /* Public */,
+      35,    0,  205,    2, 0x0a /* Public */,
+      36,    0,  206,    2, 0x0a /* Public */,
+      37,    0,  207,    2, 0x0a /* Public */,
+      38,    0,  208,    2, 0x0a /* Public */,
+      39,    0,  209,    2, 0x0a /* Public */,
+      40,    1,  210,    2, 0x0a /* Public */,
+      41,    1,  213,    2, 0x0a /* Public */,
+      42,    1,  216,    2, 0x0a /* Public */,
+      43,    1,  219,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -157,6 +166,10 @@ static const uint qt_meta_data_LightButton[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::Int,    2,
 
  // properties: name, type, flags
        3, QMetaType::QString, 0x00095103,
@@ -207,6 +220,10 @@ void LightButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 22: _t->startAlarm(); break;
         case 23: _t->stopAlarm(); break;
         case 24: _t->alarm(); break;
+        case 25: _t->setBorderOutRadius((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 26: _t->setBorderInRadius((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 27: _t->setBgRadius((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 28: _t->setOverlayRadius((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -257,7 +274,7 @@ void LightButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
 }
 
 QT_INIT_METAOBJECT const QMetaObject LightButton::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    QMetaObject::SuperData::link<QPushButton::staticMetaObject>(),
     qt_meta_stringdata_LightButton.data,
     qt_meta_data_LightButton,
     qt_static_metacall,
@@ -276,22 +293,22 @@ void *LightButton::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_LightButton.stringdata0))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QPushButton::qt_metacast(_clname);
 }
 
 int LightButton::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QPushButton::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 25)
+        if (_id < 29)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 25;
+        _id -= 29;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 25)
+        if (_id < 29)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 25;
+        _id -= 29;
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty

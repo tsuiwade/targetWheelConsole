@@ -16,11 +16,12 @@
  */
 
 #include <QWidget>
-
+#include <QPushButton>
 #ifdef quc
-class Q_DECL_EXPORT LightButton : public QWidget
+class Q_DECL_EXPORT LightButton : public QPushButton
 #else
-class LightButton : public QWidget
+
+class LightButton : public QPushButton
 #endif
 
 {
@@ -48,11 +49,11 @@ public:
 protected:
     bool eventFilter(QObject *watched, QEvent *event);
     void paintEvent(QPaintEvent *);
-    void drawBorderOut(QPainter *painter);
-    void drawBorderIn(QPainter *painter);
-    void drawBg(QPainter *painter);
+    void drawBorderOut(QPainter *painter,int);
+    void drawBorderIn(QPainter *painter,int);
+    void drawBg(QPainter *painter,int);
     void drawText(QPainter *painter);
-    void drawOverlay(QPainter *painter);
+    void drawOverlay(QPainter *painter,int radius);
 
 private:
     QString text;                   //文本
@@ -65,6 +66,12 @@ private:
     QColor borderInColorStart;      //里边框渐变开始颜色
     QColor borderInColorEnd;        //里边框渐变结束颜色
     QColor bgColor;                 //背景颜色
+
+    int borderOutRadius;
+    int borderInRadius;
+    int bgRadius;
+    int overlayRadius;
+
 
     bool showRect;                  //显示成矩形
     bool canMove;                   //是否能够移动
@@ -147,6 +154,10 @@ public Q_SLOTS:
     void startAlarm();
     void stopAlarm();
     void alarm();
+    void setBorderOutRadius(int);
+    void setBorderInRadius(int);
+    void setBgRadius(int);
+    void setOverlayRadius(int);
 };
 
 #endif // LIGHTBUTTON_H

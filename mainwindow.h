@@ -17,11 +17,15 @@ class MainWindow;
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
-  public:
+public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+//    void on_pushButton_pressed(LightButton *a);
 
-  private slots:
+public slots:
+
+
+private slots:
     void on_btn_recvClear_clicked();
 
     void on_btn_send_clicked();
@@ -29,11 +33,20 @@ class MainWindow : public QMainWindow {
     void on_btn_open_clicked();
 
     void serialPort_readyRead();
-    void toggleState(bool);
+    //    void toggleState(bool);
 
 
 
-  private:
+    //    void on_pushButton_clicked();
+
+
+
+//    void on_pushButton_released(LightButton * );
+
+    //    void on_pushButton_clicked(bool checked);
+
+
+private:
     Ui::MainWindow *ui;
     QSerialPort serial;
     void comboBoxDefaultSetting();
@@ -42,13 +55,12 @@ class MainWindow : public QMainWindow {
     QPushButton     *btn_center;
     QLabel *m_label;
     QList<LightButton*> btn_list;
-//    QList<QGraphicsDropShadowEffect*> effect_list;
+    //    QList<QGraphicsDropShadowEffect*> effect_list;
 
 
     // https://qtguide.ustclug.org/ch06-01.htm
 
-  protected:
-    virtual void resizeEvent(QResizeEvent *);
+
 };
 
 #endif // MAINWINDOW_H
