@@ -27,10 +27,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+        lightbutton.cpp \
         main.cpp \
         mainwindow.cpp
 
 HEADERS += \
+    lightbutton.h \
         mainwindow.h \
     mybutton.h
 

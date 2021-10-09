@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>636</width>
-    <height>513</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,0">
+   <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="sizePolicy">
@@ -32,7 +32,96 @@
       <property name="title">
        <string/>
       </property>
-      <zorder>groupBox_2</zorder>
+      <widget class="LightButton" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>60</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>50</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>160</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_6" native="true">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>170</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_7" native="true">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>170</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_8" native="true">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>190</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="LightButton" name="widget_9" native="true">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>310</y>
+         <width>120</width>
+         <height>80</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
     </item>
     <item>
@@ -179,7 +268,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>636</width>
+     <width>800</width>
      <height>23</height>
     </rect>
    </property>
@@ -195,6 +284,14 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>LightButton</class>
+   <extends>QWidget</extends>
+   <header>lightbutton.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -8,6 +8,7 @@
 #include <QList>
 #include <QLabel>
 #include <QGraphicsDropShadowEffect>
+#include "lightbutton.h"
 
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,7 @@ class MainWindow : public QMainWindow {
     void on_btn_open_clicked();
 
     void serialPort_readyRead();
+    void toggleState(bool);
 
 
 
@@ -39,9 +41,8 @@ class MainWindow : public QMainWindow {
 
     QPushButton     *btn_center;
     QLabel *m_label;
-    QList<QPushButton*> btn_list;
-    QList<QGraphicsDropShadowEffect*> effect_list;
-    void on_chkBoxBold(bool checked);
+    QList<LightButton*> btn_list;
+//    QList<QGraphicsDropShadowEffect*> effect_list;
 
 
     // https://qtguide.ustclug.org/ch06-01.htm
