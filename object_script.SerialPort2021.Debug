@@ -1,0 +1,10 @@
+debug/facilemenu.o
+debug/facilemenuitem.o
+debug/interactivebuttonbase.o
+debug/lightbutton.o
+debug/main.o
+debug/mainwindow.o
+debug/moc_facilemenu.o
+debug/moc_interactivebuttonbase.o
+debug/moc_lightbutton.o
+debug/moc_mainwindow.o

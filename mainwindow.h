@@ -17,21 +17,15 @@ class MainWindow;
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
-public:
+  public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 //    void on_pushButton_pressed(LightButton *a);
 
-public slots:
+  public slots:
+//    void checkedLibAction(QAction*);
 
-
-private slots:
-    void on_btn_recvClear_clicked();
-
-    void on_btn_send_clicked();
-    void on_btn_search_clicked();
-    void on_btn_open_clicked();
-
+  private slots:
     void serialPort_readyRead();
     //    void toggleState(bool);
 
@@ -46,7 +40,7 @@ private slots:
     //    void on_pushButton_clicked(bool checked);
 
 
-private:
+  private:
     Ui::MainWindow *ui;
     QSerialPort serial;
     void comboBoxDefaultSetting();

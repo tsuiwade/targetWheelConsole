@@ -1,0 +1,10 @@
+release/facilemenu.o
+release/facilemenuitem.o
+release/interactivebuttonbase.o
+release/lightbutton.o
+release/main.o
+release/mainwindow.o
+release/moc_facilemenu.o
+release/moc_interactivebuttonbase.o
+release/moc_lightbutton.o
+release/moc_mainwindow.o

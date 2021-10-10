@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
     MainWindow w;
     w.show();
 
-    QFile file(":/round_button.qss");
+    QFile file(":/style.qss");
     file.open(QIODevice::ReadOnly);
     a.setStyleSheet(file.readAll());
 
