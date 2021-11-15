@@ -7,8 +7,7 @@
 #include "qtimer.h"
 #include "qdebug.h"
 
-LightButton::LightButton(QWidget *parent) : QPushButton(parent)
-{
+LightButton::LightButton(QWidget *parent) : QPushButton(parent) {
     text = "";
     textColor = QColor(255, 255, 255);
     alarmColor = QColor(255, 107, 107);
@@ -19,7 +18,7 @@ LightButton::LightButton(QWidget *parent) : QPushButton(parent)
 
     borderOutRadius = 99;
     borderInRadius = 90;
-    bgRadius= 80;
+    bgRadius = 80;
     overlayRadius = 80;
 
     borderInColorStart = QColor(166, 166, 166);
@@ -42,21 +41,17 @@ LightButton::LightButton(QWidget *parent) : QPushButton(parent)
     //setFont(QFont("Arial", 8));
 }
 
-bool LightButton::eventFilter(QObject *watched, QEvent *event)
-{
+bool LightButton::eventFilter(QObject *watched, QEvent *event) {
 
-    if (event->type() == QEvent::HoverEnter) //鼠标进入
-    {
+    if (event->type() == QEvent::HoverEnter) { //鼠标进入
         this->bgRadius = 86;
         this->overlayRadius = 86;
-        this->borderOutRadius=100;
-        this->borderInRadius=93;
+        this->borderOutRadius = 100;
+        this->borderInRadius = 93;
         this->update();
-    }
-    else if (event->type() == QEvent::HoverLeave)    //鼠标离开
-    {
-        this->borderOutRadius=99;
-        this->borderInRadius=90;
+    } else if (event->type() == QEvent::HoverLeave) { //鼠标离开
+        this->borderOutRadius = 99;
+        this->borderInRadius = 90;
         this->bgRadius = 80;
         this->overlayRadius = 80;
         this->update();
@@ -84,8 +79,7 @@ bool LightButton::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
-void LightButton::paintEvent(QPaintEvent *)
-{
+void LightButton::paintEvent(QPaintEvent *) {
     int width = this->width();
     int height = this->height();
     int side = qMin(width, height);
@@ -113,20 +107,19 @@ void LightButton::paintEvent(QPaintEvent *)
         painter.scale(side / 200.0, side / 200.0);
 
         //绘制外边框
-        drawBorderOut(&painter,borderOutRadius);
+        drawBorderOut(&painter, borderOutRadius);
         //绘制内边框
-        drawBorderIn(&painter,borderInRadius);
+        drawBorderIn(&painter, borderInRadius);
         //绘制内部指示颜色
-        drawBg(&painter,bgRadius);
+        drawBg(&painter, bgRadius);
         //绘制居中文字
         drawText(&painter);
         //绘制遮罩层
-        drawOverlay(&painter,overlayRadius);
+        drawOverlay(&painter, overlayRadius);
     }
 }
 
-void LightButton::drawBorderOut(QPainter *painter,int borderOutRadius  )
-{
+void LightButton::drawBorderOut(QPainter *painter, int borderOutRadius  ) {
     //    int borderOutRadius = 99;
     painter->save();
     painter->setPen(Qt::NoPen);
@@ -138,8 +131,7 @@ void LightButton::drawBorderOut(QPainter *painter,int borderOutRadius  )
     painter->restore();
 }
 
-void LightButton::drawBorderIn(QPainter *painter,int borderInRadius  )
-{
+void LightButton::drawBorderIn(QPainter *painter, int borderInRadius  ) {
     //    int radius = 90;
     painter->save();
     painter->setPen(Qt::NoPen);
@@ -151,8 +143,7 @@ void LightButton::drawBorderIn(QPainter *painter,int borderInRadius  )
     painter->restore();
 }
 
-void LightButton::drawBg(QPainter *painter, int bgRadius)
-{
+void LightButton::drawBg(QPainter *painter, int bgRadius) {
     //    int radius = 80;
     painter->save();
     painter->setPen(Qt::NoPen);
@@ -161,8 +152,7 @@ void LightButton::drawBg(QPainter *painter, int bgRadius)
     painter->restore();
 }
 
-void LightButton::drawText(QPainter *painter)
-{
+void LightButton::drawText(QPainter *painter) {
     if (text.isEmpty()) {
         return;
     }
@@ -171,7 +161,8 @@ void LightButton::drawText(QPainter *painter)
     painter->save();
 
     QFont font;
-    font.setPixelSize(bgRadius);
+    font.setPixelSize(bgRadius / 2); //40
+    font.setWeight(80); //40
     painter->setFont(font);
     painter->setPen(textColor);
     QRect rect(-radius, -radius, radius * 2, radius * 2);
@@ -179,8 +170,7 @@ void LightButton::drawText(QPainter *painter)
     painter->restore();
 }
 
-void LightButton::drawOverlay(QPainter *painter,int overlayRadius )
-{
+void LightButton::drawOverlay(QPainter *painter, int overlayRadius ) {
     if (!showOverlay) {
         return;
     }
@@ -211,277 +201,233 @@ void LightButton::drawOverlay(QPainter *painter,int overlayRadius )
     painter->restore();
 }
 
-QString LightButton::getText() const
-{
+QString LightButton::getText() const {
     return this->text;
 }
 
-QColor LightButton::getTextColor() const
-{
+QColor LightButton::getTextColor() const {
     return this->textColor;
 }
 
-QColor LightButton::getAlarmColor() const
-{
+QColor LightButton::getAlarmColor() const {
     return this->alarmColor;
 }
 
-QColor LightButton::getNormalColor() const
-{
+QColor LightButton::getNormalColor() const {
     return this->normalColor;
 }
 
-QColor LightButton::getBorderOutColorStart() const
-{
+QColor LightButton::getBorderOutColorStart() const {
     return this->borderOutColorStart;
 }
 
-QColor LightButton::getBorderOutColorEnd() const
-{
+QColor LightButton::getBorderOutColorEnd() const {
     return this->borderOutColorEnd;
 }
 
-QColor LightButton::getBorderInColorStart() const
-{
+QColor LightButton::getBorderInColorStart() const {
     return this->borderInColorStart;
 }
 
-QColor LightButton::getBorderInColorEnd() const
-{
+QColor LightButton::getBorderInColorEnd() const {
     return this->borderInColorEnd;
 }
 
-QColor LightButton::getBgColor() const
-{
+QColor LightButton::getBgColor() const {
     return this->bgColor;
 }
 
-bool LightButton::getCanMove() const
-{
+bool LightButton::getCanMove() const {
     return this->canMove;
 }
 
-bool LightButton::getShowRect() const
-{
+bool LightButton::getShowRect() const {
     return this->showRect;
 }
 
-bool LightButton::getShowOverlay() const
-{
+bool LightButton::getShowOverlay() const {
     return this->showOverlay;
 }
 
-QColor LightButton::getOverlayColor() const
-{
+QColor LightButton::getOverlayColor() const {
     return this->overlayColor;
 }
 
-QSize LightButton::sizeHint() const
-{
+QSize LightButton::sizeHint() const {
     return QSize(100, 100);
 }
 
-QSize LightButton::minimumSizeHint() const
-{
+QSize LightButton::minimumSizeHint() const {
     return QSize(10, 10);
 }
 
-void LightButton::setText(const QString &text)
-{
+void LightButton::setText(const QString &text) {
     if (this->text != text) {
         this->text = text;
         this->update();
     }
 }
 
-void LightButton::setTextColor(const QColor &textColor)
-{
+void LightButton::setTextColor(const QColor &textColor) {
     if (this->textColor != textColor) {
         this->textColor = textColor;
         this->update();
     }
 }
 
-void LightButton::setAlarmColor(const QColor &alarmColor)
-{
+void LightButton::setAlarmColor(const QColor &alarmColor) {
     if (this->alarmColor != alarmColor) {
         this->alarmColor = alarmColor;
         this->update();
     }
 }
 
-void LightButton::setNormalColor(const QColor &normalColor)
-{
+void LightButton::setNormalColor(const QColor &normalColor) {
     if (this->normalColor != normalColor) {
         this->normalColor = normalColor;
         this->update();
     }
 }
 
-void LightButton::setBorderOutColorStart(const QColor &borderOutColorStart)
-{
+void LightButton::setBorderOutColorStart(const QColor &borderOutColorStart) {
     if (this->borderOutColorStart != borderOutColorStart) {
         this->borderOutColorStart = borderOutColorStart;
         this->update();
     }
 }
 
-void LightButton::setBorderOutColorEnd(const QColor &borderOutColorEnd)
-{
+void LightButton::setBorderOutColorEnd(const QColor &borderOutColorEnd) {
     if (this->borderOutColorEnd != borderOutColorEnd) {
         this->borderOutColorEnd = borderOutColorEnd;
         this->update();
     }
 }
 
-void LightButton::setBorderInColorStart(const QColor &borderInColorStart)
-{
+void LightButton::setBorderInColorStart(const QColor &borderInColorStart) {
     if (this->borderInColorStart != borderInColorStart) {
         this->borderInColorStart = borderInColorStart;
         this->update();
     }
 }
 
-void LightButton::setBorderInColorEnd(const QColor &borderInColorEnd)
-{
+void LightButton::setBorderInColorEnd(const QColor &borderInColorEnd) {
     if (this->borderInColorEnd != borderInColorEnd) {
         this->borderInColorEnd = borderInColorEnd;
         this->update();
     }
 }
 
-void LightButton::setBgColor(const QColor &bgColor)
-{
+void LightButton::setBgColor(const QColor &bgColor) {
     if (this->bgColor != bgColor) {
         this->bgColor = bgColor;
         this->update();
     }
 }
 
-void LightButton::setBorderOutRadius(int value)
-{
+void LightButton::setBorderOutRadius(int value) {
     this->borderOutRadius = value;
     this->update();
 }
 
-void LightButton::setBorderInRadius(int value)
-{
+void LightButton::setBorderInRadius(int value) {
     this->borderInRadius = value;
     this->update();
 }
-void LightButton::setBgRadius(int value)
-{
+void LightButton::setBgRadius(int value) {
     this->bgRadius = value;
     this->update();
 }
-void LightButton::setOverlayRadius(int value)
-{
+void LightButton::setOverlayRadius(int value) {
     this->overlayRadius = value;
     this->update();
 }
 
-void LightButton::setCanMove(bool canMove)
-{
+void LightButton::setCanMove(bool canMove) {
     if (this->canMove != canMove) {
         this->canMove = canMove;
         this->update();
     }
 }
 
-void LightButton::setShowRect(bool showRect)
-{
+void LightButton::setShowRect(bool showRect) {
     if (this->showRect != showRect) {
         this->showRect = showRect;
         this->update();
     }
 }
 
-void LightButton::setShowOverlay(bool showOverlay)
-{
+void LightButton::setShowOverlay(bool showOverlay) {
     if (this->showOverlay != showOverlay) {
         this->showOverlay = showOverlay;
         this->update();
     }
 }
 
-void LightButton::setOverlayColor(const QColor &overlayColor)
-{
+void LightButton::setOverlayColor(const QColor &overlayColor) {
     if (this->overlayColor != overlayColor) {
         this->overlayColor = overlayColor;
         this->update();
     }
 }
 
-void LightButton::setGreen()
-{
+void LightButton::setGreen() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(0, 166, 0));
 }
 
-void LightButton::setRed()
-{
+void LightButton::setRed() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(255, 0, 0));
 }
 
-void LightButton::setYellow()
-{
+void LightButton::setYellow() {
     textColor = QColor(25, 50, 7);
     setBgColor(QColor(238, 238, 0));
 }
 
-void LightButton::setBlack()
-{
+void LightButton::setBlack() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(10, 10, 10));
 }
 
-void LightButton::setGray()
-{
+void LightButton::setGray() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(129, 129, 129));
 }
 
-void LightButton::setBlue()
-{
+void LightButton::setBlue() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(0, 0, 166));
 }
 
-void LightButton::setLightBlue()
-{
+void LightButton::setLightBlue() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(100, 184, 255));
 }
 
-void LightButton::setLightRed()
-{
+void LightButton::setLightRed() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(255, 107, 107));
 }
 
-void LightButton::setLightGreen()
-{
+void LightButton::setLightGreen() {
     textColor = QColor(255, 255, 255);
     setBgColor(QColor(24, 189, 155));
 }
 
-void LightButton::startAlarm()
-{
+void LightButton::startAlarm() {
     if (!timerAlarm->isActive()) {
         timerAlarm->start();
     }
 }
 
-void LightButton::stopAlarm()
-{
+void LightButton::stopAlarm() {
     if (timerAlarm->isActive()) {
         timerAlarm->stop();
     }
 }
 
-void LightButton::alarm()
-{
+void LightButton::alarm() {
     if (isAlarm) {
         textColor = QColor(255, 255, 255);
         bgColor = normalColor;

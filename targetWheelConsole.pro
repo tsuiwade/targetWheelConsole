@@ -27,17 +27,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+        dialog.cpp \
         lightbutton.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        maskwidget.cpp
 
 HEADERS += \
+    dialog.h \
     lightbutton.h \
-        mainwindow.h \
+        mainwindow.h \ \
+    maskwidget.h
 
 
 FORMS += \
-        mainwindow.ui
+        dialog.ui \
+        mainwindow.ui \
+        mask_widget.ui
 
 LIB_FILE ~= s,/,\\,g
 

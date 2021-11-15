@@ -1,0 +1,10 @@
+release/dialog.o
+release/lightbutton.o
+release/main.o
+release/mainwindow.o
+release/maskwidget.o
+release/qrc_resouce.o
+release/moc_dialog.o
+release/moc_lightbutton.o
+release/moc_mainwindow.o
+release/moc_maskwidget.o

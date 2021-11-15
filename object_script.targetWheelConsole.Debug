@@ -1,0 +1,10 @@
+debug/dialog.o
+debug/lightbutton.o
+debug/main.o
+debug/mainwindow.o
+debug/maskwidget.o
+debug/qrc_resouce.o
+debug/moc_dialog.o
+debug/moc_lightbutton.o
+debug/moc_mainwindow.o
+debug/moc_maskwidget.o

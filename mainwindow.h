@@ -1,4 +1,4 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
@@ -9,6 +9,8 @@
 #include <QLabel>
 #include <QGraphicsDropShadowEffect>
 #include "lightbutton.h"
+#include <dialog.h>
+#include "maskwidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -40,7 +42,11 @@ class MainWindow : public QMainWindow {
     //    void on_pushButton_clicked(bool checked);
 
 
+
   private:
+    bool recFlag;
+    Dialog *tipDialog ;
+    QByteArray sumData;
     Ui::MainWindow *ui;
     QSerialPort serial;
     void comboBoxDefaultSetting();
@@ -49,6 +55,7 @@ class MainWindow : public QMainWindow {
     QPushButton     *btn_center;
     QLabel *m_label;
     QList<LightButton*> btn_list;
+    QList<QLabel*> lbl_list;
     //    QList<QGraphicsDropShadowEffect*> effect_list;
 
 
